@@ -23,8 +23,8 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 // 1.1挂载全局网络请求到uni顶级对象上
 uni.$http = _requestMiniprogram.$http;
 // 1.4设置请求根路径
-_requestMiniprogram.$http.baseUrl = 'https://www.uinav.com';
-// $http.baseUrl = 'https://api-ugo-web.itheima.net'
+// $http.baseUrl = 'https://www.uinav.com'
+_requestMiniprogram.$http.baseUrl = 'https://api-hmugo-web.itheima.net';
 // 1.2配置请求拦截器
 _requestMiniprogram.$http.beforeRequest = function (options) {
   // 显示加载框
