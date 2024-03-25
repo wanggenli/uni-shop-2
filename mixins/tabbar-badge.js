@@ -10,25 +10,22 @@ export default {
 	
 	methods: {
 		setBadge() {
-			uni.setTabBarBadge({
-				index: 2,
-				text: this.total + ''
-			})
+			if(this.total === 0){
+				uni.removeTabBarBadge({
+					index: 2
+				})
+			}else {
+				uni.setTabBarBadge({
+					index: 2,
+					text: this.total + ''
+				})
+			}
 		},
-		removeBadge() {
-			uni.removeTabBarBadge({
-				index: 2
-			})
-		}
+		
 	},
 	watch: {
 		total(newVal) {
-			console.log(newVal === 0);
-			if(newVal === 0) {
-				this.removeBadge()
-			} else {
-				this.setBadge()
-			}
+			this.setBadge()
 		}
 	}
 	
